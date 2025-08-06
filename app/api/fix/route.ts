@@ -53,8 +53,6 @@ export async function POST(req: NextRequest) {
     }
 
     const data = await geminiRes.json();
-    console.log('Gemini API Response:', JSON.stringify(data, null, 2));
-    
     const fixedText = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || 'Could not fix text.';
 
     return NextResponse.json({ fixedText });

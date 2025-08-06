@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
         {
           parts: [
             {
-              text: `You are an expert in English grammar. Please correct the following text for any grammatical errors and typos. Only return the corrected text, without any introductory phrases or explanations.\n\nOriginal text: "${text}"\n\nCorrected text:`,
+              text: `You are an expert in English grammar. Please correct the following text for any grammatical errors and typos. Keep the tone casual and natural - avoid overly formal punctuation like semicolons unless absolutely necessary. Prefer simple sentences with periods or commas. Only return the corrected text, without any introductory phrases or explanations.\n\nOriginal text: "${text}"\n\nCorrected text:`,
             },
           ],
         },
